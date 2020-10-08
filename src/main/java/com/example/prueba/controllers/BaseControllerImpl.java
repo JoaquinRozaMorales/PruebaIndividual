@@ -21,6 +21,7 @@ public abstract class BaseControllerImpl<E extends Base, S extends Serializable>
             return ResponseEntity.status(HttpStatus.OK).body(servicio.findAll());
         }   catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Error. Por favor intente mas tarde.\"}");
+
         }
     }
 
@@ -55,6 +56,7 @@ public abstract class BaseControllerImpl<E extends Base, S extends Serializable>
             return ResponseEntity.status(HttpStatus.NO_CONTENT).body(servicio.delete(id));
         }   catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"error\":\"Error. Por favor intente mas tarde.\"}");
+
         }
     }
 
