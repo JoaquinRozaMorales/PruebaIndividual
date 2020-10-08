@@ -14,6 +14,5 @@ public interface BaseController <E extends Base, ID extends Serializable> {
     public ResponseEntity<?> update(@PathVariable ID id, @RequestBody E entity);
     public ResponseEntity<?> delete(@PathVariable ID id);
 
-
 }
 
